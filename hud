@@ -1,0 +1,22 @@
+echo
+echo
+echo df -h
+df -h
+
+echo
+echo
+echo iostat
+iostat
+
+echo
+echo
+echo w
+w
+
+echo
+echo
+echo free -m
+free -m
+
+echo
+echo
