@@ -1,0 +1,6 @@
+alias gi='echo git init; git init'
+alias ga='echo git add; git add'
+alias gs='echo git status; git status'
+alias gd='echo git diff; git diff'
+alias gc='echo git commit -v; git commit -v'
+alias gl='echo git log --name-status; git log --name-status'
