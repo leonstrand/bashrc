@@ -1,0 +1,5 @@
+alias il='echo sudo iptables -t filter -L -n -v --line-numbers; sudo iptables -t filter -L -n -v --line-numbers'
+alias inl='echo sudo iptables -t nat -L -n -v --line-numbers; sudo iptables -t nat -L -n -v --line-numbers'
+alias iml='echo sudo iptables -t mangle -L -n -v --line-numbers; sudo iptables -t mangle -L -n -v --line-numbers'
+alias irl='echo sudo iptables -t raw -L -n -v --line-numbers; sudo iptables -t raw -L -n -v --line-numbers'
+alias isl='echo sudo iptables -t security -L -n -v --line-numbers; sudo iptables -t security -L -n -v --line-numbers'
