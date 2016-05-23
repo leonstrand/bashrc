@@ -3,3 +3,4 @@ alias l='ls -alh --color=auto'
 hg() {
   history | grep "$@"
 }
+alias rsync='rsync -av --partial --progress'
