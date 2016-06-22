@@ -1,0 +1,3 @@
+alias bl='docker exec -it dockerelk_logstash_1 /bin/bash'
+alias bk='docker exec -it dockerelk_kibana_1 /bin/bash'
+alias be='docker exec -it dockerelk_elasticsearch_1 /bin/bash'
