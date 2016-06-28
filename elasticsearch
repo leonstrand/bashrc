@@ -1,2 +1,0 @@
-alias ei='curl localhost:9200/_cat/indices?v'
-alias wei='watch -d curl localhost:9200/_cat/indices?v'
