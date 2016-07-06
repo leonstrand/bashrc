@@ -12,3 +12,4 @@ alias t1a='echo; type t1a; log=/pai-logs/SACAPPV203/Mede.Pai.AC.Submission.Workf
 alias t3a='echo; type t3a; log=/pai-logs/SACAPPV203/Mede.Pai.AC.Submission.Workflow.20160328.log; echo; echo $log; echo; sudo -v; cat $log; sudo tee -a $log <~/elk2/tmp3; echo; wc -l $log; echo'
 alias dec='time ~/docker-elk/clean.sh'
 alias dcu='command="cd ~/docker-elk && time docker-compose up"; echo $command; eval $command'
+alias dea='command="time ~/docker-elk/import.complete.alert.sh"; echo $command; eval $command'
