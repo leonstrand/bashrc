@@ -5,8 +5,8 @@ df -h
 
 echo
 echo
-echo iostat
-iostat
+echo iostat \| grep -v '^$'
+iostat | grep -v '^$'
 
 echo
 echo
