@@ -1,0 +1,28 @@
+function mstart() {
+  command='time sudo ~/moloch-startup.sh'
+  echo $command
+  eval $command
+}
+function mkill() {
+  if ps -Fu daemon | grep -qv UID; then
+    echo killing moloch...
+    ps -Fu daemon
+    for pid in $(ps -Fu daemon | grep -v UID | awk '{print $2}'); do
+      command='sudo kill '$pid
+      echo $command
+      eval $command
+    done
+  else
+    echo no moloch process to kill
+  fi
+}
+function mp() {
+  command='ps -Fu daemon'
+  echo $command
+  eval $command
+}
+function mc() {
+  until curl -sS http://127.0.0.1:9200/_cluster/health?pretty; do
+    sleep 0.1
+  done
+}
