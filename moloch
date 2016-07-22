@@ -15,6 +15,9 @@ function mkill() {
   else
     echo no moloch process to kill
   fi
+  sleep 1
+  echo ps -Fu daemon
+  ps -Fu daemon
 }
 function mp() {
   command='ps -Fu daemon'
