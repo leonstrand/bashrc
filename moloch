@@ -1,5 +1,5 @@
 function mstart() {
-  command='time sudo ~/moloch-startup.sh'
+  command='time sudo ~/moloch-control/moloch-startup.sh'
   echo $command
   eval $command
 }
