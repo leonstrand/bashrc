@@ -4,20 +4,9 @@ function mstart() {
   eval $command
 }
 function mkill() {
-  if ps -Fu daemon | grep -qv UID; then
-    echo killing moloch...
-    ps -Fu daemon
-    for pid in $(ps -Fu daemon | grep -v UID | awk '{print $2}'); do
-      command='sudo kill '$pid
-      echo $command
-      eval $command
-    done
-  else
-    echo no moloch process to kill
-  fi
-  sleep 1
-  echo ps -Fu daemon
-  ps -Fu daemon
+  command='time sudo ~/moloch-control/moloch-kill.sh'
+  echo $command
+  eval $command
 }
 function mp() {
   command='ps -Fu daemon'
