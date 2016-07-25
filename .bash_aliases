@@ -6,6 +6,7 @@ source_alias() {
   source $__file
 }
 
+echo
 echo $0: sourcing custom bashrc files in $directory
 for file in $(find ~/bashrc -type d -name .git -prune -o -type f -name .bash_aliases -prune -o -type f -name hud -prune -o -type f -print); do
   source_alias $file
