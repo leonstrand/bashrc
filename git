@@ -6,3 +6,15 @@ alias gc='echo git commit -v; git commit -v'
 alias gl='echo git log --name-status; git log --name-status'
 alias grs='echo git remote -v show; git remote -v show'
 alias gb='echo git branch; git branch'
+function ghc() {
+  if [ -n "$1" ]; then
+    for repository in $@; do
+      echo
+      echo time git clone http://github.com/leonstrand/$repository
+      time git clone http://github.com/leonstrand/$repository
+    done
+  else
+    echo $0: error: must specify at least one github repository #verbose
+    echo $0: example: ghc moloch-control #verbose
+  fi
+}
