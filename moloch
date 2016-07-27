@@ -8,6 +8,11 @@ function mkill() {
   echo $command
   eval $command
 }
+function msetup() {
+  command='time sudo ~/moloch-control/moloch-setup.sh'
+  echo $command
+  eval $command
+}
 function mp() {
   command='ps -Fu daemon'
   echo $command
