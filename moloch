@@ -5,13 +5,11 @@ function execute() {
 }
 function mstart() {
   command='time sudo ~/moloch-control/moloch-startup.sh '"$@"
-  echo $command
-  eval $command
+  execute $command
 }
 function mkill() {
   command='time sudo ~/moloch-control/moloch-kill.sh '"$@"
-  echo $command
-  eval $command
+  execute $command
 }
 function msetup() {
   command='cd ~/moloch-control'
@@ -23,8 +21,7 @@ function msetup() {
 }
 function mp() {
   command='ps -Fu daemon'
-  echo $command
-  eval $command
+  execute $command
 }
 function mc() {
   until curl -sS http://127.0.0.1:9200/_cluster/health?pretty; do
