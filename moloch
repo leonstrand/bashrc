@@ -4,7 +4,7 @@ function mstart() {
   eval $command
 }
 function mkill() {
-  command='time sudo ~/moloch-control/moloch-kill.sh'
+  command='time sudo ~/moloch-control/moloch-kill.sh '"$@"
   echo $command
   eval $command
 }
