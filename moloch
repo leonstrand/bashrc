@@ -1,3 +1,8 @@
+function execute() {
+  __command="$@"
+  echo $__command
+  eval $__command
+}
 function mstart() {
   command='time sudo ~/moloch-control/moloch-startup.sh '"$@"
   echo $command
@@ -9,9 +14,12 @@ function mkill() {
   eval $command
 }
 function msetup() {
+  command='cd ~/moloch-control'
+  execute $command
+  command='git checkout ubuntu-16-server'
+  execute $command
   command='time sudo ~/moloch-control/moloch-setup.sh'
-  echo $command
-  eval $command
+  execute $command
 }
 function mp() {
   command='ps -Fu daemon'
