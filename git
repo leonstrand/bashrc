@@ -5,6 +5,7 @@ alias gd='echo git diff; git diff'
 alias gc='echo git commit -v; git commit -v'
 alias gl='echo git log --name-status; git log --name-status'
 alias grs='echo git remote -v show; git remote -v show'
+alias grso='echo time git remote -v show origin; time git remote -v show origin'
 alias gb='echo git branch; git branch'
 function ghc() {
   if [ -n "$1" ]; then
