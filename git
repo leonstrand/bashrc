@@ -10,6 +10,7 @@ function grs() {
 }
 alias grso='echo time git remote -v show origin; time git remote -v show origin'
 alias gb='echo git branch; git branch'
+alias gba='echo git branch -a; git branch -a'
 function ghc() {
   if [ -n "$1" ]; then
     for repository in $@; do
