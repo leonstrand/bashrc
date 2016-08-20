@@ -26,3 +26,4 @@ function ghc() {
     echo $0: example: ghc moloch-control #verbose
   fi
 }
+git config --global color.ui auto
