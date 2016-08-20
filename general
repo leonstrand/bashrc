@@ -6,5 +6,30 @@ hg() {
 }
 alias rsync='rsync -av --partial --progress'
 alias np='echo sudo netstat -lntp; sudo netstat -lntp'
-alias update='time for payload in update upgrade dist-upgrade autoremove; do command="time sudo apt-get -y $payload"; echo; echo; echo $command; eval $command; done'
+function update() {
+  echo
+  echo
+  if [ -f /etc/debian_version ]; then
+    echo $0: operating system type: debian or centos
+    time for payload in update upgrade dist-upgrade autoremove; do
+      command="time sudo apt-get -y $payload"
+      echo
+      echo
+      echo $command
+      eval $command
+    done
+  elif [ -f /etc/redhat-release ]; then
+    echo $0: operating system type: redhat or centos
+    command='time sudo yum -y upgrade'
+    echo
+    echo
+    echo $command
+    eval $command
+  else
+    echo $0: operating system type: unknown
+    echo $0: error: can not determine update behavior
+  fi
+  echo
+  echo
+}
 alias vi='vim'
