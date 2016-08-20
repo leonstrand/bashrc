@@ -7,3 +7,4 @@ hg() {
 alias rsync='rsync -av --partial --progress'
 alias np='echo sudo netstat -lntp; sudo netstat -lntp'
 alias update='time for payload in update upgrade dist-upgrade autoremove; do command="time sudo apt-get -y $payload"; echo; echo; echo $command; eval $command; done'
+alias vi='vim'
