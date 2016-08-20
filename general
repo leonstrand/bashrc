@@ -1,5 +1,5 @@
 export EDITOR=vi
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h \[\033[01;31m\]'"$(ip address show $(ip address show | grep '^[123456789]' | egrep -v 'lo|docker' | cut -d' ' -f2 | tr -d :) | grep 'inet ' | awk '{print $2}')"'\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h \[\033[01;31m\]'"$(ip address show $(ip address show | grep '^[123456789]' | egrep -v 'lo|docker' | head -1 | cut -d' ' -f2 | tr -d :) | grep 'inet ' | awk '{print $2}')"'\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 alias l='ls -alh --color=auto'
 hg() {
   history | grep "$@"
