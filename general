@@ -33,3 +33,17 @@ function update() {
   echo
 }
 alias vi='vim'
+function pg() {
+  former='ps -AF | grep -i '
+  latter=' | grep -v grep'
+  if [ -n "$1" ]; then
+    command=$former"$1"$latter
+    echo $command
+    ps -AF | head -1
+    eval $command
+  else
+    echo $0: error: must provide argument
+    echo $0: usage: $former \<argument\> $latter
+    false
+  fi
+}
