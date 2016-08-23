@@ -1,3 +1,6 @@
+# do nothing for passive shell
+[[ $- != *i* ]] && return
+
 directory=~/bashrc
 
 source_alias() {
