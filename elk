@@ -1,6 +1,7 @@
 alias bl='docker exec -it dockerelk_logstash_1 /bin/bash'
 alias bk='docker exec -it dockerelk_kibana_1 /bin/bash'
 alias be='docker exec -it dockerelk_elasticsearch_1 /bin/bash'
+alias bel='docker exec -it dockerelk_elasticsearchloadbalancer_1 /bin/bash'
 alias ei='curl localhost:9200/_cat/indices?v'
 alias wei='watch -d curl localhost:9200/_cat/indices?v'
 alias wen='watch -d ~/docker-elk-control/elasticsearch.nodes.show.sh'
