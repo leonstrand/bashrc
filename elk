@@ -16,8 +16,7 @@ function des() {
   else
     echo $0: no hosts provided on command line, checking $file
     if [ -s $file ]; then
-      interface=$(ip address show | grep '^[1-9]' | egrep -v 'lo|docker' | head -1 | cut -d' ' -f2 | tr -d :)
-      self=$(ip address show $interface | grep 'inet ' | awk '{print $2}' | cut -d/ -f1)
+      self=$(for interface in $(ip link | grep -v link | awk '{print $2}' | egrep -v 'lo|docker' | tr -d :); do if ifconfig $interface | grep -q inet\ ; then break; fi; done; ifconfig $interface | grep inet\  | awk '{print $2}')
       hosts=$(grep -v $self $file)
     else
       echo $0: $file has no size
