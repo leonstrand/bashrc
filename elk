@@ -8,7 +8,7 @@ alias wen='watch -d ~/docker-elk-control/elasticsearch.nodes.show.sh'
 alias wis='watch -d ~/docker-elk-control/import.status.show.sh'
 alias wein='watch -d ~/docker-elk-control/elasticsearch.index.nodes.status.sh'
 alias dec='time ~/docker-elk-control/clean.sh'
-alias dcu='command="cd ~/docker-elk && time docker-compose up"; echo $command; eval $command'
+alias dcu='command="time ~/docker-elk-control/docker-compose-up.sh"; echo $command; eval $command'
 alias dea='command="time ~/docker-elk-control/import.complete.alert.sh"; echo $command; eval $command'
 function des() {
   file=~/docker-elk-control/elasticsearch.cluster_hosts.txt
