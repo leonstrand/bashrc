@@ -7,7 +7,7 @@ alias wei='watch -d curl localhost:9200/_cat/indices?v'
 alias wen='watch -d ~/docker-elk-control/elasticsearch.nodes.show.sh'
 alias wis='watch -d ~/docker-elk-control/import.status.show.sh'
 alias wein='watch -d ~/docker-elk-control/elasticsearch.index.nodes.status.sh'
-alias dec='time ~/docker-elk-control/clean.sh'
+alias dec='command="time ~/docker-elk-control/clean.sh"; echo $command; eval $command'
 alias dcu='command="time ~/docker-elk-control/docker-compose-up.sh"; echo $command; eval $command'
 alias dea='command="time ~/docker-elk-control/import.complete.alert.sh"; echo $command; eval $command'
 function des() {
