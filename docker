@@ -5,3 +5,12 @@ alias wdp='watch -d docker ps -a'
 alias wdi='watch -d docker images'
 alias wdia='watch -d docker images -a'
 alias dl='docker logs'
+alias dlf='docker logs -f'
+function dsr() {
+  time for i in stop rm; do
+    time docker $i $(docker ps -aqf name=$1)
+  done
+  echo
+  echo
+  dp
+}
