@@ -13,14 +13,14 @@ function dsr() {
   case $matches in
   all)
     time for i in stop rm; do
-      echo docker $i $(docker ps -aq)
+      echo docker $i \$\(docker ps -aq\)
       docker $i $(docker ps -aq)
     done
   ;;
   *)
     time for i in stop rm; do
       for match in $matches; do
-        echo docker $i $(docker ps -aqf name=$match)
+        echo docker $i \$\(docker ps -aqf name=$match\)
         docker $i $(docker ps -aqf name=$match)
       done
     done
