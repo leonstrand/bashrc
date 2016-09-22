@@ -7,10 +7,25 @@ alias wdia='watch -d docker images -a'
 alias dl='docker logs'
 alias dlf='docker logs -f'
 function dsr() {
-  time for i in stop rm; do
-    time docker $i $(docker ps -aqf name=$1)
-  done
+  echo
+  echo
+  matches="$@"
+  case $matches in
+  all)
+    time for i in stop rm; do
+      docker $i $(docker ps -aq)
+    done
+  ;;
+  *)
+    time for i in stop rm; do
+      for match in $matches; do
+        docker $i $(docker ps -aqf name=$match)
+      done
+    done
+  esac
   echo
   echo
   dp
+  echo
+  echo
 }
