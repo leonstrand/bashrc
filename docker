@@ -31,3 +31,53 @@ function dsr() {
   echo
   echo
 }
+function dstop() {
+  echo
+  echo
+  matches="$@"
+  case $matches in
+  all)
+    time for i in stop; do
+      echo docker $i \$\(docker ps -aq\)
+      docker $i $(docker ps -aq)
+    done
+  ;;
+  *)
+    time for i in stop; do
+      for match in $matches; do
+        echo docker $i \$\(docker ps -aqf name=$match\)
+        docker $i $(docker ps -aqf name=$match)
+      done
+    done
+  esac
+  echo
+  echo
+  dp
+  echo
+  echo
+}
+function dstart() {
+  echo
+  echo
+  matches="$@"
+  case $matches in
+  all)
+    time for i in start; do
+      echo docker $i \$\(docker ps -aq\)
+      docker $i $(docker ps -aq)
+    done
+  ;;
+  *)
+    time for i in start; do
+      for match in $matches; do
+        echo docker $i \$\(docker ps -aqf name=$match\)
+        docker $i $(docker ps -aqf name=$match)
+      done
+    done
+  esac
+  echo
+  echo
+  dp
+  echo
+  echo
+}
