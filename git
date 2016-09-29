@@ -27,4 +27,4 @@ function ghc() {
   fi
 }
 git config --global color.ui auto
-alias gfv='command="git fetch -v"; echo $command; eval $command'
+alias gfv='command="time git fetch -v"; echo $command; eval $command'
