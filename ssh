@@ -1,0 +1,12 @@
+function sk() {
+  for host in $@; do
+    echo $0: ssh-keyscan $host \| tee -a ~/.ssh/known_hosts
+    ssh-keyscan $host | tee -a ~/.ssh/known_hosts
+  done
+}
+function sci() {
+  for host in $@; do
+    echo $0: ~/bashrc/utility/ssh-copy-id.exp $host '****'
+    ~/bashrc/utility/ssh-copy-id.exp $host "$(cat ~/bashrc/utility/p)"
+  done
+}
