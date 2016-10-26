@@ -31,6 +31,6 @@ function des() {
 }
 alias wd='watch -d -n 10 ~/elk/dashboard.sh'
 alias wdl='watch -d ~/elk/dashboard-logstash.sh'
-alias wde='watch -d -n 10 ~/elk/dashboard-elasticsearch.sh'
+alias wde='watch -d ~/elk/dashboard-elasticsearch.sh'
 alias wdhmd='watch -d ~/elk/dashboard-host-memory-disk.sh'
-alias wdcm='watch -d -n 10 ~/elk/dashboard-container-memory.sh'
+alias wdcm='watch -d ~/elk/dashboard-container-memory.sh'
