@@ -28,3 +28,4 @@ function ghc() {
 }
 git config --global color.ui auto
 alias gfv='command="time git fetch -v"; echo $command; eval $command'
+alias gdm='command="time git diff master..origin/master"; echo $command; eval $command'
