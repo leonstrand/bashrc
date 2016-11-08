@@ -1,7 +1,7 @@
 echo
 echo
-echo df -h
-df -h
+echo df -lh
+df -lh
 
 echo
 echo
