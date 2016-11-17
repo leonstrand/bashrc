@@ -82,3 +82,12 @@ function dstart() {
   echo
   echo
 }
+function ddang() {
+  volumes=$(docker volume ls -f dangling=true | grep -v NAME | awk '{print $NF}')
+  if [ -n "$volumes" ]; then
+    echo time docker volume rm $volumes
+    time docker volume rm $volumes
+  else
+    echo no dangling volumes
+  fi
+}
