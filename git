@@ -6,7 +6,7 @@ function ga() {
 alias gs='echo git status; git status'
 alias gd='echo git diff; git diff'
 alias gc='echo git commit -v; git commit -v'
-alias gl='echo git log --name-status; git log --name-status'
+alias gl='echo git log -p; git log -p'
 function grs() {
   echo git remote -v show $@
   git remote -v show $@
