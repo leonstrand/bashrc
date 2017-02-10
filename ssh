@@ -10,3 +10,5 @@ function sci() {
     ~/bashrc/utility/ssh-copy-id.exp $host "$(cat ~/bashrc/utility/p)"
   done
 }
+alias 101='ssh sacelk101'
+alias 102='ssh sacelk102'
