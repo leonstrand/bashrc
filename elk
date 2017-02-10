@@ -1,3 +1,4 @@
+. ~/elk-control/elk-environment-variables.sh
 alias bl='docker exec -it dockerelk_logstash_1 /bin/bash'
 alias bk='docker exec -it dockerelk_kibana_1 /bin/bash'
 alias be='docker exec -it dockerelk_elasticsearch_1 /bin/bash'
@@ -31,5 +32,7 @@ function des() {
 }
 alias wdcm='watch -d ~/elk-control/dashboard-container-memory.sh'
 alias wde='watch -d ~/elk-control/dashboard-elasticsearch.sh'
+alias wdec='watch -d --color ~/elk-control/dashboard-elasticsearch-cluster.sh'
+alias wdei='watch -d ~/elk-control/dashboard-elasticsearch-indices.sh'
 alias wdhmd='watch -d ~/elk-control/dashboard-host-memory-disk.sh'
 alias wdl='watch -d ~/elk-control/dashboard-logstash.sh'
