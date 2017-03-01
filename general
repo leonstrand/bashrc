@@ -5,7 +5,7 @@ hg() {
   history | grep "$@"
 }
 alias rsync='rsync -av --partial --progress'
-alias np='echo sudo netstat -lntp; sudo netstat -lntp'
+alias np='echo sudo netstat -lntpe; sudo netstat -lntpe'
 function update() {
   echo
   echo
