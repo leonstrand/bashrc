@@ -12,7 +12,8 @@ function grs() {
   git remote -v show $@
 }
 alias grso='echo time git remote -v show origin; time git remote -v show origin'
-alias gb='echo git branch; git branch'
+alias gb='echo git branch -vv; git branch -vv'
+alias gbt='echo git branch; git branch'
 alias gba='echo git branch -a; git branch -a'
 function ghc() {
   if [ -n "$1" ]; then
