@@ -4,6 +4,7 @@ alias l='ls -alh --color=auto'
 hg() {
   history | grep "$@"
 }
+alias ht='history | tail'
 alias rsync='rsync -av --partial --progress'
 alias np='echo sudo netstat -lntpe; sudo netstat -lntpe'
 function update() {
