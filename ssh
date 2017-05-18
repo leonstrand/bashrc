@@ -12,3 +12,5 @@ function sci() {
 }
 alias 101='ssh sacelk101'
 alias 102='ssh sacelk102'
+alias 1e='h=sacelk101; [ -n $ELK_USER ] && ssh $ELK_USER@$h || ssh elk@$h'
+alias 2e='h=sacelk102; [ -n $ELK_USER ] && ssh $ELK_USER@$h || ssh elk@$h'
