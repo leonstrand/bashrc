@@ -1,4 +1,4 @@
-. ~/elk-control/elk-environment-variables.sh
+f=~/elk-control/elk-environment-variables.sh; [ -f $f ] && . ~/elk-control/elk-environment-variables.sh
 alias bl='docker exec -it dockerelk_logstash_1 /bin/bash'
 alias bk='docker exec -it dockerelk_kibana_1 /bin/bash'
 alias be='docker exec -it dockerelk_elasticsearch_1 /bin/bash'
@@ -37,3 +37,5 @@ alias wdei='watch -d ~/elk-control/dashboard-elasticsearch-indices.sh'
 alias wdeif='watch -d ~/elk-control/dashboard-elasticsearch-indices-filesystem.sh $ELK_HOSTS'
 alias wdhmd='watch -d ~/elk-control/dashboard-host-memory-disk.sh'
 alias wdl='watch -d ~/elk-control/dashboard-logstash.sh'
+alias dsra='c='\''time ~/docker-run-all/docker-stop-and-remove-all.sh'\''; echo $c; eval $c'
+alias dra='c='\''time ~/docker-run-all/docker-run-all.sh'\''; echo $c; eval $c'
