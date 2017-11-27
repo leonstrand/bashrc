@@ -4,7 +4,8 @@ alias bk='docker exec -it dockerelk_kibana_1 /bin/bash'
 alias be='docker exec -it dockerelk_elasticsearch_1 /bin/bash'
 alias bel='docker exec -it dockerelk_elasticsearchloadbalancer_1 /bin/bash'
 alias ei='curl localhost:9200/_cat/indices?v'
-alias wei='watch -d curl localhost:9200/_cat/indices?v'
+#alias wei='watch -d curl localhost:9200/_cat/indices?v'
+alias wei='watch -d time ~/elk-monitor/elasticsearch-indices.sh'
 alias wen='watch -d ~/docker-elk-control/elasticsearch.nodes.show.sh'
 alias wis='watch -d ~/docker-elk-control/import.status.show.sh'
 alias wein='watch -d ~/docker-elk-control/elasticsearch.index.nodes.status.sh'
@@ -37,3 +38,8 @@ alias wdei='watch -d ~/elk-control/dashboard-elasticsearch-indices.sh'
 alias wdeif='watch -d ~/elk-control/dashboard-elasticsearch-indices-filesystem.sh $ELK_HOSTS'
 alias wdhmd='watch -d ~/elk-control/dashboard-host-memory-disk.sh'
 alias wdl='watch -d ~/elk-control/dashboard-logstash.sh'
+#alias wep='watch -d -n 1 time ~/elk-monitor/elasticsearch-ports.sh'
+function wep() {
+  watch -d -n 1 time /home/local/MEDEANALYTICS/lstrand/elk-monitor/elasticsearch-ports.sh 2\>\&1 \| tee -a /home/local/MEDEANALYTICS/lstrand/elk-monitor/log/elasticsearch-ports.sh.log."$(date '+%Y-%m-%d')"
+}
+alias wepm='watch -d time ~/elk-monitor/elasticsearch-ports-meta.sh'
