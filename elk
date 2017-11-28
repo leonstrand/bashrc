@@ -38,8 +38,6 @@ alias wdei='watch -d ~/elk-control/dashboard-elasticsearch-indices.sh'
 alias wdeif='watch -d ~/elk-control/dashboard-elasticsearch-indices-filesystem.sh $ELK_HOSTS'
 alias wdhmd='watch -d ~/elk-control/dashboard-host-memory-disk.sh'
 alias wdl='watch -d ~/elk-control/dashboard-logstash.sh'
-#alias wep='watch -d -n 1 time ~/elk-monitor/elasticsearch-ports.sh'
-function wep() {
-  watch -d -n 1 time /home/local/MEDEANALYTICS/lstrand/elk-monitor/elasticsearch-ports.sh 2\>\&1 \| tee -a /home/local/MEDEANALYTICS/lstrand/elk-monitor/log/elasticsearch-ports.sh.log."$(date '+%Y-%m-%d')"
-}
+alias wep='watch -d -n 1 time ~/elk-monitor/elasticsearch-ports.sh'
 alias wepm='watch -d time ~/elk-monitor/elasticsearch-ports-meta.sh'
+alias wepl='watch -d -n 1 time ~/elk-monitor/elasticsearch-ports-log.sh'
