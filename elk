@@ -46,3 +46,6 @@ alias wer='watch -cd "curl -sS sacelk102:19402/_tasks?actions=*recovery* | jq -C
 alias w1i='watch -d zgrep -v green ~/elk-monitor/log/stack1-elasticsearch-indices.sh.log.*gz\; grep -v green ~/elk-monitor/log/stack1-elasticsearch-indices.sh.log.????-??-??'
 alias wesn='watch -d "time du -cs /elk/pai-logs/* | sort -n"'
 alias wesh='watch -d "time du -csh /elk/pai-logs/* | sort -h"'
+alias weid='watch -d time ~/elk-monitor/indices-changed.sh'
+alias wetp='watch -d "time curl -sS sacelk102:19402/_cat/thread_pool/bulk?v\&h=node_name,name,type,active,size,queue,queue_size,rejected,largest,completed,min,max,keep_alive | sort"'
+alias weh='watch -cd "curl -sS sacelk102:19402/_cluster/health | jq -C ."'
