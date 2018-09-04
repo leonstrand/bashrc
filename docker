@@ -93,5 +93,6 @@ function ddang() {
 }
 alias dvl='docker volume ls'
 alias dsl='docker service ls'
+alias dnl='docker node ls'
 alias wdsl='watch -d docker service ls'
 alias wdsp='watch -d docker service ps'
